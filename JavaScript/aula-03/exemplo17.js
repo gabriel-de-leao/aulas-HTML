@@ -1,9 +1,9 @@
-import { saudacao, dobro } from '../utils.js';
+import { saudacao, dobro } from '../../utils.js';
 
 console.log(saudacao('maria'))
 console.log(dobro(9))
 
-import { moeda, validarMail, dataFormatada } from '../utils.js';
+import { moeda, validarMail, dataFormatada } from '../../utils.js';
 
 console.log(`R$: ${moeda(20)}`)
 
