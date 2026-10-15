@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Clone Funcional</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            background-color: #fff;
+            position: relative;
+            overflow-x: hidden; 
+        }
+
+        header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px 20px;
+            font-size: 14px;
+        }
+
+        header a {
+            margin-left: 15px;
+            color: rgba(0, 0, 0, 0.87);
+            text-decoration: none;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: 100%;
+            position: relative;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            letter-spacing: -3px;
+            user-select: none;
+        }
+
+        .logo span:nth-child(1) { color: #4285F4; }
+        .logo span:nth-child(2) { color: #EA4335; }
+        .logo span:nth-child(3) { color: #FBBC05; }
+        .logo span:nth-child(4) { color: #4285F4; }
+        .logo span:nth-child(5) { color: #34A853; }
+        .logo span:nth-child(6) { color: #EA4335; }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            max-width: 584px;
+            height: 46px;
+            border: 1px solid #dfe1e5;
+            border-radius: 24px;
+            padding: 0 14px;
+            margin-bottom: 28px;
+            transition: box-shadow 0.2s;
+            background-color: #fff;
+            z-index: 2; 
+        }
+
+        .search-box:hover, .search-box:focus-within {
+            box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+            border-color: rgba(223, 225, 229, 0);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            padding-left: 10px;
+            height: 100%;
+            background: transparent;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 12px;
+            z-index: 2;
+        }
+
+        .buttons button, .buttons a {
+            background-color: #f8f9fa;
+            border: 1px solid #f8f9fa;
+            border-radius: 4px;
+            color: #3c4043;
+            font-size: 14px;
+            padding: 9px 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .buttons button:hover, .buttons a:hover {
+            border: 1px solid #dadce0;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+            color: #202124;
+        }
+
+        /* --- IMAGENS COM LINKS DIRETOS E CONFIAVÉIS --- */
+        .personagem-sonic {
+            position: absolute;
+            bottom: 80px;  /* Ajustado um pouco para cima do rodapé */
+            left: 60px;   
+            width: 130px;  
+            height: auto;
+            z-index: 1;
+        }
+
+        .personagem-dino {
+            position: absolute;
+            top: 120px;   
+            right: 80px;  
+            width: 130px; 
+            height: auto;
+            z-index: 1;
+        }
+
+        footer {
+            background-color: #f2f2f2;
+            color: #70757a;
+            font-size: 14px;
+            z-index: 2;
+        }
+
+        .footer-top {
+            padding: 15px 30px;
+            border-bottom: 1px solid #dadce0;
+        }
+
+        .footer-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 15px 30px;
+        }
+
+        .footer-bottom div {
+            display: flex;
+            gap: 27px;
+        }
+
+        footer a {
+            color: #70757a;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Link do Sonic corrigido -->
+    <img class="personagem-sonic" src="https://freepngimg.com" alt="Sonic">
+
+    <!-- Link do Dinossauro corrigido -->
+    <img class="personagem-dino" src="https://pngall.com" alt="Dinossauro Verde">
+
+    <header>
+        <a href="https://google.com" target="_blank">Gmail</a>
+        <a href="https://google.com.br" target="_blank">Imagens</a>
+    </header>
+
+    <main class="main-content">
+        <div class="logo">
+            <span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span>
+        </div>
+        
+        <form action="https://google.com" method="GET">
+            <div class="search-box">
+                <input type="text" name="q" autocomplete="off" autofocus required>
+            </div>
+            <div class="buttons">
+                <button type="submit">Pesquisa Google</button>
+                <a href="https://doodles.google" target="_blank">Estou com sorte</a>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="footer-top">Brasil</div>
+        <div class="footer-bottom">
+            <div>
+                <a href="https://about.google" target="_blank">Sobre</a>
+                <a href="https://google.com" target="_blank">Publicidade</a>
+                <a href="https://google.com" target="_blank">Negócios</a>
+                <a href="https://google.com" target="_blank">Como funciona a Pesquisa</a>
+            </div>
+            <div>
+                <a href="https://google.com" target="_blank">Privacidade</a>
+                <a href="https://google.com" target="_blank">Termos</a>
+                <a href="https://google.com" target="_blank">Configurações</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
