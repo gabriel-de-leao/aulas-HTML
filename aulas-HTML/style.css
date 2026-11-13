@@ -85,7 +85,7 @@ figcaption {
 }
 
 #lista {
-
+  display: flex;
   flex-direction: column;
   gap: var(--espaco-p);
   list-style: none;
@@ -282,10 +282,25 @@ footer {
 
 @media (min-width: 768px ) {
 
+  header {
+
+    flex-direction: row;
+  }
+  #lista {
+
+    flex-direction: row;
+    gap: var(--espaco-g);
+  }
+  #beneficios {
+
+    flex-direction: row;
+    }
+
   :root {
 
     --espaco-m: 24px;
-    --espaco-g: 48px
+    --espaco-g: 48px;
+    width: auto;
 
 
 
@@ -327,7 +342,17 @@ html[data-theme='light'] {
   border-radius: var(--borda-arrendodada);
   padding: var(--espaco-p var(--espaco-m));
   position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
   
+  background-color: var(--cor-texto-base);
+  color: var(--cor-fundo-base);
+}
+#msg {
+
+  color: var(--cor-sangue);
+
 
 
 
