@@ -1,74 +1,19 @@
-h1 {
-    color: black;
-    font-family: Verdana;
-    font-size: calc(1.5rem + 1vw);
-    text-align: center;
-    color: var(--cor-sangue);
-}
-img {
-
-  max-width: 100%;
-  border-radius: var(--borda-suave);
-  display: block;
-  margin: auto;
-  width: 100%;
-  height: auto;
-  filter: grayscale(80%) sepia(30%);
-  transition: all var(--transicao-rapida);
-}
-img:hover {
-
-    filter: none;
-}
-
-figcaption {
-
-  font-style: italic;
-  color: #888;
-  margin-top: 10px;
-
-
-
-}
-.passar {
-
-  position: absolute;
-  top: 15%;
-  left: 0;
-  transform: translate(0, -50%);
-  color: var(--cor-sangue); 
-
-  animation: moverparaomeio 5s ease-out forwards;
-}
-
-#fundo {
-
-    background-color: var(--cor-fundo-base);
-    color: var(--cor-texto-base);
-    font-family: var(--fonte-principal);
-    line-height: 1.6;
-
-}
-#cabeçalho {
-
-    background-color: #000000;
-    padding: var(--espaco-m), var(--espaco-g);
-    flex-direction: column;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-
-}
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-:root {
 
-  --cor-sangue:#8b0000;
-  --cor-zumbi:#2e8b57;
+body {
+  background-color: var(--cor-fundo-base);
+  color: var(--cor-texto-base);
+  font-family: var(--fonte-principal);
+  line-height: 1.6;
+}
+
+:root {
+  --cor-sangue: #8b0000;
+  --cor-zumbi: #2e8b57;
   --cor-fundo-base: #1a1a1a;
   --cor-texto-base: #e0e0e0;
   --cor-superficie: #222222;
@@ -76,12 +21,44 @@ figcaption {
   --espaco-m: 16px;
   --espaco-g: 32px;
   --borda-suave: 8px;
-  --borda-arrendodada: 50px;
+  --borda-arrendondada: 50px;
   --fonte-principal: 'Arial', sans-serif;
   --cor-botao: var(var(--cor-zumbi));
-  --sombra-padrao: 0 4px 8px rgba (0,0,0,0,.5);
+  --sombra-padrao: 0 4px 8px rgba (0, 0, 0, 0, 5);
   --transicao-rapida: 0.3s ease;
+}
 
+header {
+  background-color: #0000;
+  padding: var(--espaco-m), var(--espaco-g);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+header h1 {
+  color: var(--cor-sangue);
+}
+
+#navegacao {
+  display: flex;
+  list-style-type: none;
+
+  &.a {
+      text-decoration: none;
+  }
+}
+
+h1 {
+  color: black;
+  font-family: Verdana;
+  font-size: calc(1.5rem + 1vw);
+  text-align: center;
+  color: var(--cor-sangue);
 }
 
 #lista {
@@ -89,271 +66,262 @@ figcaption {
   flex-direction: column;
   gap: var(--espaco-p);
   list-style: none;
-
 }
-nav a {
 
+nav a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
   text-transform: uppercase;
-  transition: all var(--transicao-rapida);
-
+  transition: all var(--transicao-rapida)
 }
+
 nav a:hover {
-
   color: var(--cor-zumbi);
-
-
 }
-main {
 
-  width: calc(100% - var(--espaco-g) * 2);
+main {
+  width: calc(100% - var(var(--espaco-g) * 2));
   max-width: 1000px;
   margin: 40px auto;
-  
 }
+
 section {
-
-  margin-bottom: calc(var(--espaco-g) * 2);
-
+  margin-bottom: calc(var(--espaco-g) * 2)
 }
-#h2 {
 
+h2 {
   color: var(--cor-zumbi);
   border-bottom: 2px solid var(--cor-sangue);
   padding-bottom: 10px;
-
 }
-#boas-Vindas {
 
+#boas-vindas {
   text-align: center;
-
 }
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: var(--borda-arrendondada);
+  filter: grayscale(80%);
+  filter: sepia(30%);
+  transition: all var(--transicao-rapida);
+}
+
+img:hover {
+  filter: none;
+}
+
+figcaption {
+
+  font-style: italic;
+  color: #888;
+  margin-top: 10px;
+}
+
 #beneficios {
 
+  display: flex;
   flex-direction: column;
   gap: 40px;
-
 }
-#ol {
 
+ol {
   padding-left: 20px;
-
 }
+
 li {
-
   margin-bottom: 15px;
-
 }
+
 strong {
-
   color: var(--cor-sangue);
-
 }
-aside {
 
+aside {
   background-color: var(--cor-superficie);
   padding: 20px;
-  border-radius: var(--borda-suave);
+  border-radius: var(--borda-arrendondada);
   border: 1px dashed var(--cor-zumbi);
   box-shadow: var(--sombra-padrao);
-
 }
-blockquote {
 
+blockquote {
   font-size: 1.2rem;
-  font-family: italic;
+  font-style: italic;
   border-left: 5px solid var(--cor-zumbi);
   padding-left: 20px;
 }
-cite {
 
+cite {
   display: block;
   text-align: right;
-  color: red;
-  
+  color: var(--cor-sangue);
 }
-table {
 
+table {
   width: 100%;
+  border-collapse: collapse;
   display: block;
   overflow-x: auto;
-  border-collapse: collapse;
-  
 }
-th{
 
+td {
   border: 1px solid #444;
+  padding: 15px;
+  color: white;
+}
+
+th {
+  border-radius: var(--borda-arrendondada);
   padding: 15px;
   background-color: var(--cor-sangue);
-
 }
-td {
 
-  border: 1px solid #444;
-  padding: 15px;
-
-}
 fieldset {
-
   border: 2px solid var(--cor-zumbi);
   padding: 25px;
-  border-radius: var(--borda-suave);
+  border-radius: var(--borda-arrendondada);
   box-shadow: var(--sombra-padrao);
 }
-#botao {
 
+#botao {
   background-color: var(--cor-zumbi);
   color: white;
   padding: 15px 30px;
   border: none;
   cursor: pointer;
-  width: auto;
+  width: 100%;
 }
-#botao:hover {
 
+#botao:hover {
   background-color: var(--cor-sangue);
 }
-input [type="text"]
-input [type="email"]
-select {
 
+
+input [type="text"] input [type="email"] select {
   width: 100%;
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: var(--borda-suave);
+  border-radius: var(--borda-arrendondada);
 
-  background-color: var(--cor-input-fundo #333);
-  color: var(--cor-input-texto #fff);
+  background-color: var(--cor-input-fundo, #333);
+  color: var(--cor-input-texto, #fff);
   border: 1px solid #555;
 
   :focus {
-
-    outline:none;
-    border-color: var(--cor-zumbi);
+      outline: none;
+      border-color: var(--cor-zumbi);
   }
 }
-label {
 
+label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
-details {
 
+details {
   background-color: #222;
   padding: 15px;
   margin-bottom: 10px;
   border-left: 4px solid var(--cor-sangue);
 }
-summary {
 
+summary {
   cursor: pointer;
   font-weight: bold;
-  color: var(--cor-zumbi);
+  color: var(--cor-zumbi)
 }
-details p {
 
+details p {
   margin-top: 15px;
   color: #bbb;
 }
-footer {
 
+footer {
   text-align: center;
   padding: 30px;
   margin-top: 40px;
   border-top: 1px solid #333;
 }
-.botao-match {
 
+.botao-match {
   color: var(--cor-zumbi);
   background-color: var(--cor-botao);
 }
+
 .botao-match:hover {
-
-  ---cor-botao: var(var(--cor-sangue));
+  --cor-botao: var(var(--cor-sangue));
 }
-.cartao-zumbi:hover {
 
-  box-shadow: 0 8px calc(var(--espaco-m) * 1.5) rgba (0,0,0,0.7);
+.cartao-zumbi:hover {
+  box-shadow: 0 8px calc(var(--espaco-m) * 1.5) rgba(0, 0, 0, 0, 7);
   transform: translateY(-5px);
 }
 
-@media (min-width: 768px ) {
+@media (min-width: 768px) {
+
 
   header {
-
-    flex-direction: row;
+      flex-direction: row;
   }
+
   #lista {
-
-    flex-direction: row;
-    gap: var(--espaco-g);
+      flex-direction: row;
+      gap: var(--espaco-g);
   }
+
   #beneficios {
-
-    flex-direction: row;
-    }
+      flex-direction: row;
+  }
 
   :root {
-
-    --espaco-m: 24px;
-    --espaco-g: 48px;
-    width: auto;
-
-
-
-
-
+      --espaco-m: 24px;
+      --espaco-g: 48px;
+      width: auto;
   }
 }
-@media (min-width:1024px) {
 
-  p {
 
-        max-width: 800px;
-        margin: 0 auto;
+@media (min-width: 1024px) {
+  .p {
+      max-width: 800px;
+      margin: 0 auto;
   }
 }
-@media (prefers-color-scheme: ligth) {
 
+@media (prefers-color-scheme: light) {
   :root {
-
-    --cor-fundo-base: #f4f4f4;
-    --cor-texto-base: #111111;
-    --cor-superficie: #ffffff;
-    --cor-borda: #cccccc;
+      --cor-fundo-base: #f4f4f9;
+      --cor-texto-base: #111111;
+      --cor-superficie: #ffffff;
+      --cor-borda: #cccccc;
   }
 }
+
 html[data-theme='light'] {
 
-  --cor-fundo-base: #f4f4f4;
+  --cor-fundo-base: #f4f4f9;
   --cor-texto-base: #111111;
   --cor-superficie: #ffffff;
   --cor-borda: #cccccc;
-  --cor-zumbi: #006400;
   --cor-sangue: #cc0000;
+  --cor-zumbi: #006400;
   --cor-input-fundo: #ffffff;
   --cor-input-texto: #333333;
-}
-#btn-tema {
 
-  border-radius: var(--borda-arrendodada);
+}
+
+#btn-tema {
+  border-radius: var(--borda-arrendondada);
   padding: var(--espaco-p var(--espaco-m));
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 100;
-  
   background-color: var(--cor-texto-base);
   color: var(--cor-fundo-base);
-}
-#msg {
-
-  color: var(--cor-sangue);
-
-
-
-
 }
